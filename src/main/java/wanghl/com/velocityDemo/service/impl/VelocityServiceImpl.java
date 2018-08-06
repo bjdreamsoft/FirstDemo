@@ -23,35 +23,35 @@ public class VelocityServiceImpl implements VelocityService {
 	@Override
 	public String assemblyData() {
 		
-		//¶¨ÒåÄ£°å´¦ÀíÒıÇæ
+		//ï¿½ï¿½ï¿½ï¿½Ä£ï¿½å´¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		VelocityEngine engine = new VelocityEngine();
 		
 		Properties prop = new Properties();
 		
-		//ÉèÖÃvelocity×ÊÔ´¼ÓÔØ·½Ê½Îªclass
+		//ï¿½ï¿½ï¿½ï¿½velocityï¿½ï¿½Ô´ï¿½ï¿½ï¿½Ø·ï¿½Ê½Îªclass
 		prop.setProperty("resource.loader", "class");
-        //ÉèÖÃvelocity×ÊÔ´¼ÓÔØ·½Ê½ÎªfileÊ±µÄ´¦ÀíÀà
+        //ï¿½ï¿½ï¿½ï¿½velocityï¿½ï¿½Ô´ï¿½ï¿½ï¿½Ø·ï¿½Ê½ÎªfileÊ±ï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
 		prop.setProperty("class.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
 	
-		//Ä£°åÒıÇæ³õÊ¼»¯
+		//Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
 		engine.init(prop);
 		
-		//´ÓÄ£°åÒıÇæÖĞ»ñÈ¡Ä£°å£¬²¢Ö¸¶¨±àÂë¸ñÊ½£¨·ÀÖ¹ÂÒÂë£©
+		//ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ»ï¿½È¡Ä£ï¿½å£¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ë£©
 		Template template = engine.getTemplate("demo1/wanghl/department.vm", "UTF-8");
 		
-		//ÉèÖÃÄ£°åÄÚÈİµÄÉÏÏÂÎÄ»·¾³
+		//ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½
 		VelocityContext vcontext = new VelocityContext();
 		
-		//»ñÈ¡Êı¾İ
+		//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
 		List<Department> list = departDao.getAllDepartment();
 		
-		//ÏòÉÏÏÂÎÄ»·¾³ÖĞ¼ÓÈëÊı¾İ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½Ğ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		vcontext.put("list", list);
 		
-		//¶¨Òå½á¹û½ÓÊÜwriter¶ÔÏó
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½writerï¿½ï¿½ï¿½ï¿½
 		StringWriter sw = new StringWriter();
 		
-		//Êı¾İÆ´×°
+		//ï¿½ï¿½ï¿½ï¿½Æ´×°
 		template.merge(vcontext, sw);
 		
 		return sw.toString();
