@@ -1,0 +1,24 @@
+#macro(showData $data)
+	<tr>
+		<td>$data.deptId</td>
+		<td>$data.deptName</td>
+		<td>$data.deptNo</td>
+		<td>$data.location</td>
+	</tr>
+#end
+
+<table>
+	<thead>
+		<tr>
+			<td>DEPT_ID</td>
+			<td>DEPT_NAME</td>
+			<td>DEPT_NO</td>
+			<td>LOCATION</td>
+		</tr>
+	</thead>
+	<tbody>
+	#foreach($data in $list)
+    	#showData($data)
+	#end
+	</tbody>
+</table>
