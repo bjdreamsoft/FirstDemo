@@ -4,4 +4,25 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>fileupload</servlet-name>
+  	<servlet-class>wanghl.com.uploadDemo.servlet.FileUploadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>fileupload</servlet-name>
+  	<url-pattern>/upload/fileUpload.action</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>saveform</servlet-name>
+  	<servlet-class>wanghl.com.uploadDemo.servlet.SaveForm</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>saveform</servlet-name>
+  	<url-pattern>/upload/saveform.action</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
