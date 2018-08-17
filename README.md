@@ -1,3 +1,11 @@
+<h1>redis非关系型数据库应用</h1>
+1、技术简介<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过redis缓存技术减轻数据库压力，提高查询效率，运用持久化数据备份。<br>
+2、学习目的<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增加对nosql数据库的了解，为以后项目引用做好基础。<br>
+3、学习任务一<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运用redis缓存技术，提高访问速度，减少数据库访问次数和压力。<br>
+4、学习任务二<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运用redis持久化，数据备份，保护数据安全。<br>
+6、学习时间<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周五下午统一提交代码，并进行交流。(待定待定)<br>
+7、下期学习任务安排<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赵静伟
+
 <h1>通过JSP页面上传附件</h1>
 1、技术简介<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过jsp，input标签，type=file上传一个附件，通过servlet下载保存到本地的某个目录下。<br>
