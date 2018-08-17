@@ -1,3 +1,6 @@
+<h1>redis非关系型数据库应用</h1>
+
+
 <h1>通过JSP页面上传附件</h1>
 1、技术简介<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过jsp，input标签，type=file上传一个附件，通过servlet下载保存到本地的某个目录下。<br>
